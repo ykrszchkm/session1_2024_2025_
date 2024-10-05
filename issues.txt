@@ -1,0 +1,60 @@
+LISTE DES ISSUES:
+
+1. Initialisation du localStorage avec un monstre par défaut et un id unique
+Nom de l’issue : Initialisation des monstres avec un id unique
+Nom du commit : feat: initialize monsters with unique id in localStorage
+Objectif : Initialiser des monstres fictifs dans le localStorage avec un id unique pour chaque monstre.
+Détails : Chaque monstre aura un id unique, comme { id: 2024545676, name: "Aqualizzard", type: "aquatique", pv: 50, attaque: 50 }. Générer cet id via Date.now().
+
+2. Mise en place d’un watcher pour la sauvegarde automatique
+Nom de l’issue : Sauvegarde automatique avec watcher profond
+Nom du commit : feat: implement deep watcher for automatic localStorage sync
+Objectif : Mettre en place un watcher profond pour sauvegarder automatiquement les modifications dans le localStorage.
+Détails : Surveiller les changements dans la liste des monstres et synchroniser automatiquement le localStorage.
+
+3. Récupération et affichage des monstres avec leur id
+Nom de l’issue : Affichage des monstres depuis le localStorage
+Nom du commit : feat: display monsters with id from localStorage
+Objectif : Afficher les monstres depuis le localStorage en utilisant l’id pour les identifier.
+Détails : Afficher la liste des monstres avec leur id et les informations correspondantes (nom, type, pv, attaque).
+
+4. Ajout d’un monstre avec un id unique
+Nom de l’issue : Ajouter un monstre avec un id unique
+Nom du commit : feat: add monster with auto-generated unique id
+Objectif : Ajouter un monstre avec un id généré automatiquement.
+Méthode : addOne()
+Détails : Lors de l’ajout d’un monstre, générer un id unique (par exemple, utiliser Date.now()), ajouter ce monstre à la liste des monstres.
+
+5. Suppression d’un monstre par son id
+Nom de l’issue : Suppression d’un monstre par id
+Nom du commit : feat: delete monster by id
+Objectif : Supprimer un monstre en utilisant son id.
+Méthode : deleteOneById(id)
+Détails : Lorsqu’un utilisateur clique sur "Supprimer", supprimer le monstre correspondant à l’id donné de la liste des monstres en ajoutant une micro-animation animateCSS.
+
+7. Modification d’un monstre existant en utilisant l’id
+Nom de l’issue : Modification d’un monstre
+Nom du commit : feat: edit and update monster by id
+Objectif : Modifier un monstre en utilisant son id.
+Méthodes : editOneById(id) et updateOneById(id)
+Détails : Utilisez l’id pour retrouver le monstre correspondant et pré-remplir le formulaire pour modification.
+
+8. Tri des monstres par ordre alphabétique (nom)
+Nom de l’issue : Tri des monstres
+Nom du commit : feat: sort monsters alphabetically by name
+Objectif : Trier les monstres par ordre alphabétique avant de les afficher.
+Computed : sortedMonsters()
+Détails : Trier la liste des monstres par nom avant de les afficher à l’utilisateur. Utiliser une propriété calculée pour garantir que le tri est toujours actif.
+
+5. Affichage et gestion de l'onglet "Filtres"
+Nom de l’issue : Implémentation de l'affichage de l'onglet "Filtres"
+Nom du commit : feat: implement filters tab display
+Objectif : Implémenter la fonctionnalité de l'onglet "Filtres", permettant à l’utilisateur de basculer entre l’ajout de monstres et les filtres.
+Détails : Utiliser une propriété isFiltersTabActive pour afficher ou masquer l'onglet correspondant via des directives conditionnelles (utiliser les classes css déjà présentes pour l'onglet ajout).
+
+9. Recherche et filtrage des monstres par nom ou type
+Nom de l’issue : Recherche et filtrage des monstres
+Nom du commit : feat: implement search and filter functionality for monsters
+Objectif : Filtrer les monstres affichés en fonction de la recherche par nom ou type.
+Computed : filteredMonsters()
+Détails : Utiliser la propriété searchQuery pour filtrer les monstres dont le nom ou le type contient la chaîne de recherche. SearchQuery devrait être un objet littéral avec une propriété par filtre ayant chacune une valeur par défaut)
